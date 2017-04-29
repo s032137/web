@@ -1,25 +1,23 @@
 <html>
-	<head>
-		<title>Runner application</title>
-		<link rel="stylesheet" type="text/css" href="lab4d.css" />
+<head>		
 <style>
 #warning {color:red; display:none;}
 </style>
 <script>
 function validate() {
-var Surname=document.getElementById("Surname");
-var na=document.getElementById("Name");
-var hk=document.getElementById("HKID");
+var username=document.getElementById("username");
+var Name=document.getElementById("Name");
+var HKID=document.getElementById("HKID");
 var pd=document.getElementById("password");
-var dd=document.getElementById("DD");
-var mm=document.getElementById("MM");
-var yy=document.getElementById("YY");
-var mb=document.getElementById("moblie");
-var addr=document.getElementById("address");
-var ma=document.getElementById("mail");
-var conE=document.getElementById("config");
+var DD=document.getElementById("DD");
+var MM=document.getElementById("MM");
+var YY=document.getElementById("YY");
+var moblie=document.getElementById("moblie");
+var address=document.getElementById("address");
+var mail=document.getElementById("mail");
+var config=document.getElementById("config");
 
-var cop=document.getElementById("cp");
+var cp=document.getElementById("cp");
 var warning=document.getElementById("warning");
 
 var num=document.getElementsByTagName("select");
@@ -34,62 +32,73 @@ warning.style.display="initial";
 return false;
 }
 
-if(Surname.value==""){
+if(username.value==""){
 warning.style.display="initial";
 
 return false;
 }
-if(na.value==""){
+}
+if(Name.value==""){
 warning.style.display="initial";
 
 return false;
 }
-if(hk.value==""){
+}
+if(HKID.value==""){
 warning.style.display="initial";
 
 return false;
+}
 }
 if(pd.value==""){
 warning.style.display="initial";
 
 return false;
 }
-if(dd.value==""){
+}
+if(DD.value==""){
 warning.style.display="initial";
 
 return false;
 }
-if(mm.value==""){
+}
+if(MM.value==""){
 warning.style.display="initial";
 
 return false;
 }
-if(yy.value==""){
+}
+if(YY.value==""){
 warning.style.display="initial";
 
 return false;
 }
-if(mb.value==""){
+}
+if(moblie.value==""){
 warning.style.display="initial";
 
 return false;
 }
-if(addr.value==""){
+}
+if(address.value==""){
 warning.style.display="initial";
 
 return false;
 }
-if(ma.value==""){
+}
+if(mail.value==""){
 warning.style.display="initial";
 
 return false;
 }
-if(conE.value==""){
+}
+if(config.value==""){
 warning.style.display="initial";
 
 return false;
 }
-if(cop.value==""){
+}
+if(cp.value==""){
 warning.style.display="initial";
 
 return false;
@@ -125,11 +134,11 @@ return false;
 			<table>
 				<tr>
 					<td>Surname(Please use English):</td>
-					<td><input type="text" id="Surname"/></td>
+					<td><input type="text" id="username"/></td>
 				</tr>
 				<tr>
 					<td>Name(Please use English):</td>
-					<td><input type="text" id="Name" /></td>
+					<td><input type="text id="Name"/></td>
 				</tr>
 
 				<tr>
