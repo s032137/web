@@ -1,12 +1,7 @@
 <?php
 session_start();
+if (!isset($_SESSION['email'])) {
 
-$reply = "";
-if( isset($_SESSION["msg"])){
-	$reply = "<p>".$_SESSION["msg"]."</p>";
-}
-unset($_SESSION["msg"]);
-unset($_SESSION["expiry"]);
 ?>
 <html>
     <head>
@@ -23,20 +18,19 @@ unset($_SESSION["expiry"]);
     
     
 <body>
-<?=$reply?>
 <div class="container">
     <h1>Login Form</h1>
-    <form class="form-horizontal">
+    <form class="form-horizontal" action="loginprocess.php" method="post">
         <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-3">Email</label>
             <div class="col-xs-9">
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Email">
             </div>
         </div>
         <div class="form-group">
             <label for="inputPassword" class="control-label col-xs-3">Password</label>
             <div class="col-xs-9">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                <input name="password" type="password" class="form-control" id="inputPassword" placeholder="Password">
             </div>
         </div>
         <div class="form-group">
@@ -49,3 +43,10 @@ unset($_SESSION["expiry"]);
 </body>
 </html>
 
+
+<?php
+} else {
+    echo "You're already login";
+    
+}
+?>
