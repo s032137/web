@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+session_start();
+
+$reply = "";
+if( isset($_SESSION["msg"])){
+	$reply = "<p>".$_SESSION["msg"]."</p>";
+}
+unset($_SESSION["msg"]);
+unset($_SESSION["expiry"]);
+?>
+
+
 <html>
     <head>
         <meta charset="utf-8"/>
@@ -12,6 +23,7 @@
     </head>
     
     <body>
+    <?=$reply?>
     <div class="container">
         <h1>Registration Form</h1>
         <form class="form-horizontal">
@@ -22,7 +34,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-xs-3" for="inputEmail">Password:</label>
+                <label class="control-label col-xs-3" for="inputPassword">Password:</label>
                 <div class="col-xs-9">
                     <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                 </div>
@@ -39,6 +51,12 @@
                     <input type="text" class="form-control" id="lastName" placeholder="Last Name">
                 </div>
             </div>
+            <div class="form-group">
+                <label class="control-label col-xs-3" for="inputAge">Age:</label>
+                <div class="col-xs-9">
+                    <input type="text" class="form-control" id="lastName" placeholder="Age">
+                </div>
+            </div>            
             <div class="form-group">
                 <label class="control-label col-xs-3" for="phoneNumber">Phone Number:</label>
                 <div class="col-xs-9">
