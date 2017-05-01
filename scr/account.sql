@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2017 at 09:04 AM
+-- Generation Time: May 01, 2017 at 12:02 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -43,7 +43,8 @@ CREATE TABLE `member` (
 
 INSERT INTO `member` (`Email`, `Password`, `FirstName`, `LastName`, `Age`, `PhoneNumber`, `DOB`, `Gender`) VALUES
 ('123@123', '123', 'a', 'bc', 1, '7185256340', '2017-04-06', 'male'),
-('abc@abc', '123', 'F', 'F', 1, '123', '12', 'F');
+('abc@abc', '123', 'F', 'F', 1, '123', '12', 'F'),
+('bcc@bcc', '123', 'bcc', 'bcc', 13, '123456789', '2017-05-11', 'male');
 
 --
 -- Indexes for dumped tables
