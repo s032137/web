@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `account`
+-- Database: `accountt`
 --
 
 -- --------------------------------------------------------
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `member`
 --
 
-CREATE TABLE `member` (
+CREATE TABLE `memberr` (
   `Email` varchar(50) NOT NULL,
   `Password` varchar(50) NOT NULL,
   `FirstName` varchar(50) NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE `member` (
 -- Dumping data for table `member`
 --
 
-INSERT INTO `member` (`Email`, `Password`, `FirstName`, `LastName`, `Age`, `PhoneNumber`, `DOB`, `Gender`) VALUES
+INSERT INTO `memberr` (`Email`, `Password`, `FirstName`, `LastName`, `Age`, `PhoneNumber`, `DOB`, `Gender`) VALUES
 ('123@123', '123', 'a', 'bc', 1, '7185256340', '2017-04-06', 'male'),
 ('abc@abc', '123', 'F', 'F', 1, '123', '12', 'F'),
 ('bcc@bcc', '123', 'bcc', 'bcc', 13, '123456789', '2017-05-11', 'male');
@@ -53,7 +53,7 @@ INSERT INTO `member` (`Email`, `Password`, `FirstName`, `LastName`, `Age`, `Phon
 --
 -- Indexes for table `member`
 --
-ALTER TABLE `member`
+ALTER TABLE `memberr`
   ADD PRIMARY KEY (`Email`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

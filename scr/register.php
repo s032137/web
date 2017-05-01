@@ -1,12 +1,13 @@
 <?php
 session_start();
-
-
 ?>
 
 
 <html>
     <head>
+        <style>
+            #warning {color:red; display:none;}
+        </style>
         <meta charset="utf-8"/>
         <title>RegisterForm</title>
         
@@ -15,12 +16,17 @@ session_start();
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <!--script src-->
         <script src="js/bootstrap.min.js"></script>
+
     </head>
     
     <body>
+    
     <div class="container">
+        <div name="warning" class="hide" role="alert">
+        <strong>Warning!</strong> Please input an integer on your age.
+    </div>
         <h1>Registration Form</h1>
-        <form class="form-horizontal" action="registerprocess.php" method="post">
+        <form class="form-horizontal" action="registerprocess.php" method="post" >
             <div class="form-group">
                 <label class="control-label col-xs-3" for="inputEmail">Email:</label>
                 <div class="col-xs-9">

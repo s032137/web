@@ -10,7 +10,7 @@
             $pwd = $_POST['password'];
 
 
-            $stmt = $pdo->prepare("SELECT password FROM member WHERE email = :email;");
+            $stmt = $pdo->prepare("SELECT * FROM member WHERE email = :email;");
             $stmt->bindParam(":email", $email);
             $stmt->execute();
 
@@ -21,11 +21,14 @@
 
             if ($result) {
             foreach ($result as $r) {
-                $db_pwd = $r['password'];
+                    $db_email = $r[0];
+                    $db_pwd = $r[1];
+                    $db_firstname = $r[2];
             }
 
                 if ($pwd == $db_pwd) {
-                    $_SESSION['email'] = $email;
+                    $_SESSION['email'] = $db_email;
+                    $_SESSION['firstname'] = $db_firstname;
                     header("Location: home.php");
                 } else {
                     echo "Wrong Password";            
