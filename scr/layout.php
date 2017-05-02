@@ -8,12 +8,13 @@
                     <title>Marathon - <?php echo $title; ?></title>
                      <!-- bootstrap css-->
                     <link rel="stylesheet" href="css/bootstrap.min.css">
-                    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+                    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
                     <!--script src-->
-                    <script src="js/bootstrap.min.js"></script>
+                   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
                     <script src = "https://code.jquery.com/jquery.js"></script>
                </head>
             <body>
+                <div class="container">
         <?php
     }
     
@@ -53,7 +54,7 @@
            <div class="row">
             <div class="col-sm-2">
                <ul class="nav nav-pills nav-stacked">
-                   <li><a href="#">About Us</a></li>
+                   <li><a href="aboutus.php">About Us</a></li>
                    <li><a href="#">Race information</a></li>
                    <li><a href="#">Enquiry</a></li>
                    <li><a href="#">News</a></li>
@@ -84,6 +85,7 @@
                        }
                        ?>
                </div>
+</div>
             </body>
             </html>
                 <?php
