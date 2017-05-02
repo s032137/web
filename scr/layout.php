@@ -7,11 +7,11 @@
                     <meta charset="utf-8">
                     <title>Marathon - <?php echo $title; ?></title>
                      <!-- bootstrap css-->
-                    <link rel="stylesheet" href="css/bootstrap.min.css">
-                    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
                     <!--script src-->
-                   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-                    <script src = "https://code.jquery.com/jquery.js"></script>
+                   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
                </head>
             <body>
                 <div class="container">
@@ -55,9 +55,9 @@
             <div class="col-sm-2">
                <ul class="nav nav-pills nav-stacked">
                    <li><a href="aboutus.php">About Us</a></li>
-                   <li><a href="#">Race information</a></li>
-                   <li><a href="#">Enquiry</a></li>
-                   <li><a href="#">News</a></li>
+                   <li><a href="raceinfo">Race information</a></li>
+                   <li><a href="enquiry.php">Enquiry</a></li>
+                   <li><a href="news.php">News</a></li>
                </ul>
             </div>
                <div class="col-sm-8">
