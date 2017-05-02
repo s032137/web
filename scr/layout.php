@@ -8,9 +8,10 @@
                     <title>Marathon - <?php echo $title; ?></title>
                      <!-- bootstrap css-->
                     <link rel="stylesheet" href="css/bootstrap.min.css">
-                    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+                    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
                     <!--script src-->
                     <script src="js/bootstrap.min.js"></script>
+                    <script src = "https://code.jquery.com/jquery.js"></script>
                </head>
             <body>
         <?php
@@ -41,10 +42,7 @@
                     ?>
                   
                 </ul>
-              </div>
-                 <div class="thumbnail">
-                        <img class="image-responsive" width="35%" height="35%" src="img/topbanner.jpg" />
-                 </div>
+             
             </nav>
         <?php
         

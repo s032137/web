@@ -7,7 +7,7 @@
     if (!isset($_SESSION['email'])) {
         if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['firstname']) 
                 && isset($_POST['lastname']) && isset($_POST['age']) && isset($_POST['phonenumber']) && isset($_POST['date']) && isset($_POST['gender'])){                            
-            
+
             $email = $_POST['email'];
             
             if (checkemail($pdo,$email)){
