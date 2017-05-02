@@ -6,14 +6,14 @@
 ?>
 <div>
 <h1>Routing</h1>
-
+<!--collapse-->
 <div class = "panel-group" id = "accordion">
    <div class = "panel panel-default">
       
       <div class = "panel-heading">
          <h4 class = "panel-title">
             <a data-toggle = "collapse" data-parent = "#accordion" href = "#collapseOne">
-               Routing
+               MARATHON ROUTING
             </a>
          </h4>
       </div>
@@ -26,28 +26,77 @@
       </div>
       
    </div>
-   <div class = "panel panel-default">
+    <div class = "panel panel-default">
+      
       <div class = "panel-heading">
          <h4 class = "panel-title">
             <a data-toggle = "collapse" data-parent = "#accordion" href = "#collapseTwo">
-               EMAIL
+               HALF MARATHON ROUTING
             </a>
          </h4>
       </div>
-
+      
       <div id = "collapseTwo" class = "panel-collapse collapse">
          <div class = "panel-body">
-             <p>In order to have your enquiry handled efficiently, please send your question to the related contact listed below:</p>
              
-             <p>General Enquiry: hkmarathon@hkaaa.com</p>
-             
-             <p>Registration and Participant's Information: entry_hkmarathon@hkaaa.com</p>
-             
+             <img src="img/HalfMarathon.jpg" width="700px" height="456px" >
          </div>
       </div>
       
    </div>
-  
+       <div class = "panel panel-default">
+      
+        <div class = "panel-heading">
+         <h4 class = "panel-title">
+            <a data-toggle = "collapse" data-parent = "#accordion" href = "#collapseThree">
+               10KM ROUTING
+            </a>
+         </h4>
+        </div>
+      
+      <div id = "collapseThree" class = "panel-collapse collapse">
+         <div class = "panel-body">            
+             <img src="img/10KM.jpg" width="700px" height="456px" >
+         </div>
+      </div>
+      
+   </div>
+    <div class = "panel panel-default">
+      
+      <div class = "panel-heading">
+         <h4 class = "panel-title">
+            <a data-toggle = "collapse" data-parent = "#accordion" href = "#collapseFour">
+               10KM WHEELCHAIR RACE ROUTING
+            </a>
+         </h4>
+      </div>
+      
+      <div id = "collapseFour" class = "panel-collapse collapse">
+         <div class = "panel-body">
+             
+             <img src="img/10KMWheelchair.jpg" width="700px" height="456px" >
+         </div>
+      </div>
+      
+   </div>
+    <div class = "panel panel-default">
+      
+      <div class = "panel-heading">
+         <h4 class = "panel-title">
+            <a data-toggle = "collapse" data-parent = "#accordion" href = "#collapseFive">
+               3KM WHEELCHAIR RACE ROUTING
+            </a>
+         </h4>
+      </div>
+      
+      <div id = "collapseFive" class = "panel-collapse collapse">
+         <div class = "panel-body">
+             
+             <img src="img/3KMWheelchair.jpg" width="700px" height="456px" >
+         </div>
+      </div>
+      
+   </div>  
 </div>
  
 
