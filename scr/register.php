@@ -9,7 +9,7 @@ if (!isset($_SESSION['email'])) {
             
             function checkSubmit() {
                 var warning = document.getElementById("warning");
-                if (checkEmail() && checkPwd() && checkFirstName() && checkLastName() && checkAge() && checkPhoneNum() && checkDoBDate() && checkGender()) {
+                if (checkEmail() && checkPwd() && checkFirstName() && checkLastName() && checkPhoneNum() && checkGender()) {
                     return true;
                 } else {
                     warning.style.display = "";
@@ -142,7 +142,16 @@ if (!isset($_SESSION['email'])) {
             }
             
             function checkGender() {
-                var x = document.getElementById("registerform");
+                var x = document.getElementsByName("gender");
+                var y = document.getElementById("genderDiv");
+                
+                if (x[0].checked || x[1].checked) {
+                    y.className="form-group has-success has-feedback";
+                    return true;
+                } else {
+                    y.className="form-group has-error has-feedback";
+                    return false;
+                }
                 
                 for (i=0; i<x.gender.length; i++) {
                     if (x.gender[i].checked) {
@@ -159,7 +168,7 @@ if (!isset($_SESSION['email'])) {
     
     <div class="container">
         <div name="warning" id="warning" class="alert alert-warning"  role="alert" style="display: none">
-        <strong>Warning!</strong> Please input an integer on your age.
+        <strong>Warning!</strong> Please enter all required fields.
         </div>
         <h1>Registration Form</h1>
         <form id="registerform" class="form-horizontal" action="registerprocess.php" method="post" onsubmit="return checkSubmit()"  >
@@ -216,12 +225,12 @@ if (!isset($_SESSION['email'])) {
                 <label class="control-label col-xs-3">Gender:</label>
                 <div class="col-xs-2">
                     <label class="radio-inline">
-                        <input name="gender" type="radio"  value="male"> Male
+                        <input name="gender" type="radio"  value="male" onclick="checkGender()"> Male
                     </label>
                 </div>
                 <div class="col-xs-2">
                     <label class="radio-inline">
-                        <input name="gender" type="radio"  value="female"> Female
+                        <input name="gender" type="radio"  value="female" onclick="checkGender()"> Female
                     </label>
                 </div>
             </div>
