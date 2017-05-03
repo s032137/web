@@ -47,13 +47,13 @@ if (isset($_SESSION['email'])) {
 			  <div class="form-group">
 				<label class="col-sm-2 control-label">First name:</label>
 				<div class="col-lg-8">
-				  <input name='firstname' id='firstname' class="form-control" type="text" value="<?=$result["FirstName"]?>"/>
+				  <input name='firstname' id='firstname' class="form-control" type="text" value="<?=$result["FirstName"]?>" readonly/>
 				</div>
 			  </div>
 			  <div class="form-group">
 				<label class="col-sm-2 control-label">Last name:</label>
 				<div class="col-lg-8">
-				  <input name='lastname' id='lastname' class="form-control" type="text" value="<?=$result["LastName"]?>"/>
+				  <input name='lastname' id='lastname' class="form-control" type="text" value="<?=$result["LastName"]?>" readonly/>
 				</div>
 			  </div>
 			  <div class="form-group">
@@ -77,7 +77,7 @@ if (isset($_SESSION['email'])) {
 			  <div class="form-group">
 				<label class="col-sm-2 control-label">Email:</label>
 				<div class="col-lg-8">
-				  <input name='email' id='email' class="form-control" type="text" value="<?=$result["Email"]?>" >
+				  <input name='email' id='email' class="form-control" type="text" value="<?=$result["Email"]?>" readonly/ >
 				</div>
 			  </div>
 			  <div class="form-group">
