@@ -99,7 +99,20 @@ if (!isset($_SESSION['email'])) {
 
 <?php
 } else {
-    echo "You're already login";
+ //Sorry, please complete the form.
+    echo "<html>";
+    echo "<head>";
+    echo "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>";
+    echo "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>";
+    echo "<script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>";
+    echo "<script src = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>";
+    echo "</head>";
+    echo "<body>";
+    echo "<div name='warning' id='warning' class='alert alert-warning'  role='alert'>";
+    echo "<strong>Warning!</strong>You're already login.";
+    echo "</div>";
+    echo "</body>";
+    echo "</html>";     
     
 }
 ?>

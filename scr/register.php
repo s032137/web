@@ -4,10 +4,9 @@ head('Register');
 if (!isset($_SESSION['email'])) {
     
 ?>
-	<head>
-		
+
         <script type="text/javascript">
-			
+            
             function checkSubmit() {
                 var warning = document.getElementById("warning");
                 if (checkEmail() && checkPwd() && checkFirstName() && checkLastName() && checkPhoneNum() && checkGender()) {
@@ -218,7 +217,7 @@ if (!isset($_SESSION['email'])) {
             <div class="form-group" id="dobDiv"> 
                 <label class="control-label col-xs-3" for="date">Date of Birth</label>
                 <div class="col-xs-9">
-                    <input class="form-control" id="dobDate" name="dobDate"  type="date" oninput="checkDoBDate()" min='1899-01-01' max='2000-13-13'/>
+                    <input class="form-control" id="dobDate" name="dobDate"  type="date" oninput="checkDoBDate()" />
                     <span id="datesSymbol" style="visibility: hidden"></span>
                 </div>
             </div>
@@ -247,20 +246,20 @@ if (!isset($_SESSION['email'])) {
 </body>
 </html>
 <script>
-	<!--Get the date of the max--!>
-	var today = new Date();
-	var dd = today.getDate();
-	var mm = today.getMonth()+1; //January is 0!
-	var yyyy = today.getFullYear();
-	if(dd<10){
-		dd='0'+dd
-	} 
-	if(mm<10){
-		mm='0'+mm
-	}
-	today = yyyy-16+'-'+mm+'-'+dd;
-	document.getElementById("dobDate").setAttribute("max", today);
-	<!--EndDate--!>  
+    <!--Get the date of the max--!>
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+        if(dd<10){
+                dd='0'+dd
+        } 
+        if(mm<10){
+                mm='0'+mm
+        }
+        today = yyyy-16+'-'+mm+'-'+dd;
+        document.getElementById("dobDate").setAttribute("max", today);
+    <!--EndDate--!>  
 </script>
 <?php
 } else {

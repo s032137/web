@@ -31,25 +31,57 @@
                     $_SESSION['firstname'] = $db_firstname;
                     header("Location: home.php");
                 } else {
-                    echo "Wrong Password";            
+                    //warning wrong password
+                    echo "<html>";
+                    echo "<head>";
+                    echo "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>";
+                    echo "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>";
+                    echo "<script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>";
+                    echo "<script src = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>";
+                    echo "</head>";
+                    echo "<body>";
+                    echo "<div name='warning' id='warning' class='alert alert-warning'  role='alert'>";
+                    echo "<strong>Warning!</strong>Wrong Password.";
+                    echo "</div>";
+                    echo "</body>";
+                    echo "</html>";           
                 }
             } else {
-                echo "Wrong Email";
+                    //warning wrong email
+                    echo "<html>";
+                    echo "<head>";
+                    echo "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>";
+                    echo "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>";
+                    echo "<script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>";
+                    echo "<script src = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>";
+                    echo "</head>";
+                    echo "<body>";
+                    echo "<div name='warning' id='warning' class='alert alert-warning'  role='alert'>";
+                    echo "<strong>Warning!</strong>Wrong Email.";
+                    echo "</div>";
+                    echo "</body>";
+                    echo "</html>";   
             }
 
             $pdo = null;
         } else {
-            echo "Empty input";
+                //warning Empty input
+                    echo "<html>";
+                    echo "<head>";
+                    echo "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>";
+                    echo "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>";
+                    echo "<script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>";
+                    echo "<script src = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>";
+                    echo "</head>";
+                    echo "<body>";
+                    echo "<div name='warning' id='warning' class='alert alert-warning'  role='alert'>";
+                    echo "<strong>Warning!</strong>Empty input.";
+                    echo "</div>";
+                    echo "</body>";
+                    echo "</html>";   
         }
     } else {
         echo "You're already login";
-    }
-        
-        
-    
-   
-    
-    
-            
+    }            
 ?>
 
