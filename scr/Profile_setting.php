@@ -94,6 +94,14 @@
                                         <a href="Profile_register.php">
                                             <i class="glyphicon glyphicon-book"></i> Event Application </a>
                                     </li>
+                                    <?php
+                                        if ($_SESSION['email'] == 'admin@vtc.edu.hk') {
+                                            echo ' <li>
+                                        <a href="post_news.php">
+                                            <i class="glyphicon glyphicon-info-sign"></i> Post news </a>
+                                        </li>';
+                                        }
+                                    ?>
                                 </ul>
                             </div>
                             <!-- END MENU -->
