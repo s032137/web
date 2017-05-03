@@ -12,10 +12,15 @@
 <html>
 
 <head>
+    <title>
+        Tutorials point Bootstrap Examples
+    </title>
+
     <!-- Bootstrap Core CSS -->
     <link href="http://www.tutorialspoint.com/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="one-page-wonder.css" rel="stylesheet">
     <style>
         /* Profile container */
         
@@ -35,6 +40,10 @@
         
         .profile-usermenu ul li {
             border-bottom: 1px solid #f0f4f7;
+        }
+        
+        .profile-usermenu ul li:last-child {
+            border-bottom: none;
         }
         
         .profile-usermenu ul li a {
@@ -63,7 +72,13 @@
             border-left: 2px solid #5b9bd1;
             margin-left: -2px;
         }
+        /* Profile Content */
         
+        .profile-content {
+            padding: 20px;
+            background: #fff;
+            min-height: 460px;
+        }
     </style>
 
 </head>
@@ -90,13 +105,17 @@
                                         <a href="Profile_index.php">
                                             <i class="glyphicon glyphicon-home"></i> Overview </a>
                                     </li>
-                                    <li  class="active">
-                                        <a href="">
-                                            <i class="glyphicon glyphicon-user"></i> Profile Info </a>
+                                    <li class="active">
+                                        <a href="Profile_setting.php">
+                                            <i class="glyphicon glyphicon-user"></i> Profile Settings </a>
                                     </li>
                                     <li>
-                                        <a href="Profile_register.php">
-                                            <i class="glyphicon glyphicon-book"></i> Event Application </a>
+                                        <a href="#" target="_blank">
+                                            <i class="glyphicon glyphicon-ok"></i> Tasks </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="glyphicon glyphicon-flag"></i> Help </a>
                                     </li>
                                 </ul>
                             </div>
@@ -104,9 +123,11 @@
                         </div>
                     </div>
                     <div class="col-md-9">
-						<?php
-							EditProfile();
-						?>
+                        <div class="profile-content">
+							<?php
+								EditProfile();
+							?>
+                        </div>
                     </div>
                 </div>
             </div>

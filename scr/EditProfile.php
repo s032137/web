@@ -10,20 +10,17 @@ if (isset($_SESSION['email'])) {
 <html>
 
 	<head>
-        <!-- bootstrap css-->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
-		<!--script src-->
-		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
-		
-		<style>
-		#success_message {
-			display: none;
-			}
-		</style>
+                     <!-- bootstrap css-->
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+                    <!--script src-->
+                   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+					<style>
+						#success_message {
+							display: none;
+						}
+					</style>
 	</head>
 <?php
 	$stmt = $pdo->prepare("SELECT * FROM member WHERE email = :email");
@@ -50,13 +47,13 @@ if (isset($_SESSION['email'])) {
 			  <div class="form-group">
 				<label class="col-sm-2 control-label">First name:</label>
 				<div class="col-lg-8">
-				  <input name='firstname' id='firstname' class="form-control" type="text" value="<?=$result["FirstName"]?>" readonly/>
+				  <input name='firstname' id='firstname' class="form-control" type="text" value="<?=$result["FirstName"]?>"/>
 				</div>
 			  </div>
 			  <div class="form-group">
 				<label class="col-sm-2 control-label">Last name:</label>
 				<div class="col-lg-8">
-				  <input name='lastname' id='lastname' class="form-control" type="text" value="<?=$result["LastName"]?>" readonly/>
+				  <input name='lastname' id='lastname' class="form-control" type="text" value="<?=$result["LastName"]?>"/>
 				</div>
 			  </div>
 			  <div class="form-group">
@@ -80,7 +77,7 @@ if (isset($_SESSION['email'])) {
 			  <div class="form-group">
 				<label class="col-sm-2 control-label">Email:</label>
 				<div class="col-lg-8">
-				  <input name='email' id='email' class="form-control" type="text" value="<?=$result["Email"]?>" readonly>
+				  <input name='email' id='email' class="form-control" type="text" value="<?=$result["Email"]?>" >
 				</div>
 			  </div>
 			  <div class="form-group">
