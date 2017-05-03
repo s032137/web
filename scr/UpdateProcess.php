@@ -44,11 +44,12 @@ session_start();
 			$email = $_POST['email'];
 			$phonenumber = $_POST['phonenumber'];
 			$password = $_POST['password'];
+			$passwordmd5 = MD5($password);
 			try{
 				$stmt = $pdo->prepare("UPDATE member SET PhoneNumber = :phonenumber, Password = :password WHERE Email = :email");
 				$stmt->bindParam(":email", $email);
 				$stmt->bindParam(":phonenumber", $phonenumber);
-				$stmt->bindParam(":password", $password);
+				$stmt->bindParam(":password", $passwordmd5);
 				$stmt->execute();
 				
 				if( $stmt->rowCount() > 0) {

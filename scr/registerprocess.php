@@ -14,6 +14,7 @@
                 
             
             $pwd = $_POST['password'];
+            $pwdmd5 = MD5($pwd);
             $firstname = $_POST['firstname'];
             $lastname = $_POST['lastname'];
             $age = $_POST['age'];
@@ -24,7 +25,7 @@
             
             $stmt = $pdo->prepare("INSERT INTO member VALUES(:email,:pwd,:firstname,:lastname,:age,:phonenumber,:date,:gender);");
             $stmt->bindParam(":email", $email);
-            $stmt->bindParam(":pwd", $pwd);
+            $stmt->bindParam(":pwd", $pwdmd5);
             $stmt->bindParam(":firstname", $firstname);
             $stmt->bindParam(":lastname", $lastname);
             $stmt->bindParam(":age", $age);

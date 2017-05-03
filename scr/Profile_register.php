@@ -87,10 +87,6 @@
                             <div class="profile-usermenu">
                                 <ul class="nav">
                                     <li>
-                                        <a href="Profile_index.php">
-                                            <i class="glyphicon glyphicon-home"></i> Overview </a>
-                                    </li>
-                                    <li>
                                         <a href="Profile_setting.php">
                                             <i class="glyphicon glyphicon-user"></i> Profile Info </a>
                                     </li>
