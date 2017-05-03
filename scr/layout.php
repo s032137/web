@@ -113,14 +113,23 @@
                       <?php
                       if ($title == 'Home') {
                       ?>
-                       <div class="container">
-                            <hr>
-                            <img class="img-responsive img-center" src="img/1.jpg" />
-                            <img class="img-responsive img-center" src="img/2.jpg" />
-                            <hr>
-                            <img class="img-responsive img-center" src="img/3.jpg" />
-                            <img class="img-responsive img-center" src="img/4.png" />
+                       <!--footer logo-->
+                       <div class="container-fluid">   
+                           <div class="row">
+                                <hr>
+                                <img class="col-xs-6 nopadding" src="img/1.jpg" style="width: 50%;"/>
+                                <img class="col-xs-6 nopadding" src="img/HKAAA.jpg" style="width: 50%;"/>
+                           </div>
+                                <hr>
+                            <div class="row">
+                                <img class="col-xs-6   nopadding" src="img/3.jpg" style="max-width: 20%;" />
+                                <img class="col-xs-6   nopadding" src="img/MTR.jpg"style="max-width: 20%;" />
+                                <img class="col-xs-6   nopadding" src="img/4.png"style="max-width: 20%;" />
+                                <img class="col-xs-6   nopadding" src="img/HKT.jpg"style="max-width: 20%;" />
+                                <img class="col-xs-6   nopadding" src="img/sponsor-03-02.png"style="max-width: 20%;" />
+                           </div>
                        </div>
+                        <!--END footer logo-->
                        <?php
                        }
                        ?>

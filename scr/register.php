@@ -9,7 +9,7 @@ if (!isset($_SESSION['email'])) {
             
             function checkSubmit() {
                 var warning = document.getElementById("warning");
-                if (checkEmail() && checkPwd() && checkFirstName() && checkLastName() && checkPhoneNum() && checkGender()) {
+                if (checkEmail() && checkPwd() && checkFirstName() && checkLastName() && checkPhoneNum() && checkGender() && checkTermsbox()) {
                     return true;
                 } else {
                     warning.style.display = "";
@@ -161,7 +161,15 @@ if (!isset($_SESSION['email'])) {
                         return false;
                     }
                 }
-            }            
+            }
+            function checkTermsbox() {  
+                if(document.registerform.termsbox.checked == true){
+                    alert("You have agree the terms.");
+                    return true;
+                }else {      
+                    return false;
+                }          
+            } 
         </script>
     </head>
     <body>
@@ -171,7 +179,7 @@ if (!isset($_SESSION['email'])) {
         <strong>Warning!</strong> Please enter all required fields.
         </div>
         <h1>Registration Form</h1>
-        <form id="registerform" class="form-horizontal" action="registerprocess.php" method="post" onsubmit="return checkSubmit()"  >
+        <form name="registerform" id="registerform" class="form-horizontal" action="registerprocess.php" method="post" onsubmit="return checkSubmit()"  >
             <div class="form-group" id="emailDiv">
                 <label class="control-label col-xs-3" for="inputEmail">Email:</label>
                 <div class="col-xs-9">
@@ -234,19 +242,29 @@ if (!isset($_SESSION['email'])) {
                     </label>
                 </div>
             </div>
-            <br>
             <div class="form-group">
                 <div class="col-xs-offset-3 col-xs-9">
-                    <input type="submit" class="btn btn-primary" value="Submit">                   
+                    <label name="termsLabel" id="termsLabel" style="color: blue">
+                    <input type="checkbox" name="termsbox" values="check" onclick = "checkTermsbox()">I agree to the Terms and Conditions
+                    </label>
                 </div>
             </div>
+            
+            
+            <div class="form-group">
+                <div class="col-xs-offset-3 col-xs-9">
+                    <input type="submit" class="btn btn-primary" value="Submit" onclick="checkSubmit()">                   
+                </div>
+            </div>           
+            <br>
     </form>
+
 </div>
         
 </body>
 </html>
 <script>
-    <!--Get the date of the max--!>
+    <!--Get the date of the max-->
         var today = new Date();
         var dd = today.getDate();
         var mm = today.getMonth()+1; //January is 0!
@@ -258,8 +276,9 @@ if (!isset($_SESSION['email'])) {
                 mm='0'+mm
         }
         today = yyyy-16+'-'+mm+'-'+dd;
-        document.getElementById("dobDate").setAttribute("max", today);
-    <!--EndDate--!>  
+        document.getElementById("dobDate").setAttribute("max", today);   
+
+       
 </script>
 <?php
 } else {

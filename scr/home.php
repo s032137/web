@@ -3,9 +3,10 @@
     head('Home');
     topNavBar();
     leftNavBar();
+?>    
+
     
-    
-    
+<?php    
     footer('Home');
 
 ?>
