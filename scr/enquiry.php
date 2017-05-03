@@ -5,13 +5,14 @@
     leftNavBar();
 ?>
 <div>
-    <!--abouts bar-->
+    <!--Contact US Bar-->
     <nav class = "navbar navbar-default" role = "navigation" >   
        <div class = "navbar-header">
           <a class = "navbar-brand" style="color: blue "><span class="glyphicon glyphicon-map-marker"><b>Contact Us</b></span></a>
        </div>   
     </nav>
-    <br>    
+    <br> 
+<!--Contact US Content-->    
 <p>The HKAAA is committed to develop and promote local athletics in Hong Kong. Your advice and comments are most valuable to our continuous service refinements.</p>
 
 <div class = "panel-group" id = "accordion">

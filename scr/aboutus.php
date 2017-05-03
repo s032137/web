@@ -5,7 +5,7 @@
     leftNavBar();
 ?>
 <div>
-    <!--abouts bar-->
+    <!--abouts Bar-->
     <nav class = "navbar navbar-default" role = "navigation" >   
        <div class = "navbar-header">
           <a class = "navbar-brand" style="color: blue "><span class="glyphicon glyphicon-map-marker"><b>About Us</b></span></a>
@@ -17,6 +17,7 @@
 <br>
 <br>
 <br>
+<!--ABOUT US CONTENT-->
 <div class = "panel-group" id = "accordion">
    <div class = "panel panel-default">
       

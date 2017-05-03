@@ -22,7 +22,7 @@
   </div>
 </div>
 
-
+<!--latest News-->
 <div class="panel panel-primary">
   <div class="panel-heading">
     [13 April 2017] Hong Kong Amateur Athletic Association - Tender for Marathon Secretariat Service (Organization & Operations)</div>
@@ -32,7 +32,7 @@
     the HKAAA wishes to invite application to provide secretariat services (Organization & Operations) to this major event on a maximum of 3 years'contract term.
   </div>
 </div>
-
+<!--latest News-->
 <div class="panel panel-primary">
   <div class="panel-heading">
     [13 April 2017] Hong Kong Amateur Athletic Association - Tender for Marathon Website Project</div>
