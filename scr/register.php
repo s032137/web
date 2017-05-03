@@ -6,7 +6,7 @@ if (!isset($_SESSION['email'])) {
 ?>
 
         <script type="text/javascript">
-            
+            //checkSubmit
             function checkSubmit() {
                 var warning = document.getElementById("warning");
                 if (checkEmail() && checkPwd() && checkFirstName() && checkLastName() && checkPhoneNum() && checkGender() && checkTermsbox()) {
@@ -17,7 +17,7 @@ if (!isset($_SESSION['email'])) {
                 }
                 
             }
-            
+            //checkEmail
             function checkEmail() {
                 var x = document.getElementById("inputEmail").value;
                 var y = document.getElementById("emailDiv");
@@ -38,7 +38,7 @@ if (!isset($_SESSION['email'])) {
                     return true;
                 }
             }
-            
+            //checkPwd
             function checkPwd() {
                 var x = document.getElementById("inputPassword").value;
                 var y = document.getElementById("pwdDiv");
@@ -55,7 +55,7 @@ if (!isset($_SESSION['email'])) {
                     return true;
                 }
             }
-            
+            //checkFirstName
             function checkFirstName() {
                 var x = document.getElementById("firstName").value;
                 var y = document.getElementById("fnDiv");
@@ -72,7 +72,7 @@ if (!isset($_SESSION['email'])) {
                     return true;
                 }
             }
-
+            //checkLastName
             function checkLastName() {
                 var x = document.getElementById("lastName").value;
                 var y = document.getElementById("lnDiv");
@@ -89,7 +89,7 @@ if (!isset($_SESSION['email'])) {
                     return true;
                 }
             }
-            
+            //checkAge
             function checkAge() {
                 var x = document.getElementById("age").value;
                 var y = document.getElementById("ageDiv");
@@ -106,7 +106,7 @@ if (!isset($_SESSION['email'])) {
                     return true;
                 }
             }
-            
+            //checkPhoneNum
             function checkPhoneNum() {
                 var x = document.getElementById("phoneNumber").value;
                 var y = document.getElementById("phoneNumDiv");
@@ -123,7 +123,7 @@ if (!isset($_SESSION['email'])) {
                     return true;
                 }
             }
-            
+            //checkDoBDate
             function checkDoBDate() {
                 var x = document.getElementById("dobDate").value;
                 var y = document.getElementById("dobDiv");
@@ -140,7 +140,7 @@ if (!isset($_SESSION['email'])) {
                     return true;
                 }
             }
-            
+            //checkGender
             function checkGender() {
                 var x = document.getElementsByName("gender");
                 var y = document.getElementById("genderDiv");
@@ -162,8 +162,9 @@ if (!isset($_SESSION['email'])) {
                     }
                 }
             }
+            //checkTermsbox
             function checkTermsbox() {  
-                if(document.registerform.termsbox.checked == true){
+                if(document.registerform.termsbox.checked){
                     alert("You have agree the terms.");
                     return true;
                 }else {      
@@ -175,11 +176,15 @@ if (!isset($_SESSION['email'])) {
     <body>
     
     <div class="container">
+        <!--Form-->
+        <!--Warning-->
         <div name="warning" id="warning" class="alert alert-warning"  role="alert" style="display: none">
         <strong>Warning!</strong> Please enter all required fields.
         </div>
-        <h1>Registration Form</h1>
+        <!--END Warning-->
+        <h1>Registration Form</h1>        
         <form name="registerform" id="registerform" class="form-horizontal" action="registerprocess.php" method="post" onsubmit="return checkSubmit()"  >
+            <!--Email-->
             <div class="form-group" id="emailDiv">
                 <label class="control-label col-xs-3" for="inputEmail">Email:</label>
                 <div class="col-xs-9">
@@ -187,6 +192,8 @@ if (!isset($_SESSION['email'])) {
                     <span id="emailSymbol" style="visibility: hidden"></span>
                 </div>
             </div>
+            <!--END Email-->
+            <!--Password-->
             <div class="form-group" id="pwdDiv">
                 <label class="control-label col-xs-3" for="inputPassword">Password:</label>
                 <div class="col-xs-9">
@@ -194,6 +201,8 @@ if (!isset($_SESSION['email'])) {
                     <span id="pwdSymbol" style="visibility: hidden"></span>
                 </div>
             </div>
+            <!--End Password-->
+            <!--First Name-->
             <div class="form-group" id="fnDiv">
                 <label class="control-label col-xs-3" for="firstName">First Name:</label>
                 <div class="col-xs-9">
@@ -201,6 +210,8 @@ if (!isset($_SESSION['email'])) {
                     <span id="fnSymbol" style="visibility: hidden"></span>
                 </div>
             </div>
+            <!--END First Name-->
+            <!--Last Name-->
             <div class="form-group" id="lnDiv">
                 <label class="control-label col-xs-3" for="lastName">Last Name:</label>
                 <div class="col-xs-9">
@@ -208,20 +219,26 @@ if (!isset($_SESSION['email'])) {
                     <span id="lnSymbol" style="visibility: hidden"></span>
                 </div>
             </div>
+            <!--END Last Name-->
+            <!--Age-->
             <div class="form-group" id="ageDiv">
                 <label class="control-label col-xs-3" for="inputAge">Age:</label>
                 <div class="col-xs-9">
                     <input name="age" type="text" class="form-control" id="age" placeholder="Age" oninput="checkAge()">
                     <span id="agesSymbol" style="visibility: hidden"></span>
                 </div>
-            </div>            
+            </div> 
+            <!--END Age-->
+            <!--Phone Number-->
             <div class="form-group" id="phoneNumDiv">
                 <label class="control-label col-xs-3" for="phoneNumber">Phone Number:</label>
                 <div class="col-xs-9">
                     <input name="phonenumber" type="tel" class="form-control" id="phoneNumber" placeholder="Phone Number" oninput="checkPhoneNum()">
                     <span id="phoneNumSymbol" style="visibility: hidden"></span>
                 </div>
-            </div>  
+            </div> 
+            <!--END Number-->
+            <!--Date of Birth-->
             <div class="form-group" id="dobDiv"> 
                 <label class="control-label col-xs-3" for="date">Date of Birth</label>
                 <div class="col-xs-9">
@@ -229,6 +246,9 @@ if (!isset($_SESSION['email'])) {
                     <span id="datesSymbol" style="visibility: hidden"></span>
                 </div>
             </div>
+            <!--END Date of Birth-->
+            
+            <!--Gender-->
             <div class="form-group" id="genderDiv">
                 <label class="control-label col-xs-3">Gender:</label>
                 <div class="col-xs-2">
@@ -242,6 +262,8 @@ if (!isset($_SESSION['email'])) {
                     </label>
                 </div>
             </div>
+            <!--END Gender-->
+            <!--Terms Checkbox-->
             <div class="form-group">
                 <div class="col-xs-offset-3 col-xs-9">
                     <label name="termsLabel" id="termsLabel" style="color: black">
@@ -249,15 +271,15 @@ if (!isset($_SESSION['email'])) {
                     </label>
                 </div>
             </div>
-            
-            
+            <!--END Terms Checkbox-->
+            <!--Submit Button-->
             <div class="form-group">
                 <div class="col-xs-offset-3 col-xs-9">
                     <input type="submit" class="btn btn-primary" value="Submit" onclick="checkSubmit()">                   
                 </div>
             </div>           
             <br>
-            <!-- Modal -->
+            <!--Terms Modal -->
           <div class="modal fade" id="termsModal" role="dialog">
             <div class="modal-dialog">
 
@@ -310,9 +332,10 @@ if (!isset($_SESSION['email'])) {
 
                     <p>If you have any questions about these Terms, please contact us.</p>                        
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+                    <!--Terms Modal Close Button-->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
               </div>
 
             </div>

@@ -6,7 +6,7 @@ if (!isset($_SESSION['email'])) {
 ?>
 
         <script type="text/javascript">
-            
+            //checkSubmit
             function checkSubmit() {
                 var warning = document.getElementById("warning");
                 if (checkEmail() && checkPwd()) {
@@ -18,7 +18,7 @@ if (!isset($_SESSION['email'])) {
                 }
                 
             }
-            
+            //checkEmail
             function checkEmail() {
                 var x = document.getElementById("inputEmail").value;
                 var y = document.getElementById("emailDiv");
@@ -39,7 +39,7 @@ if (!isset($_SESSION['email'])) {
                     return true;
                 }
             }
-            
+            //checkPassWord
             function checkPwd() {
                 var x = document.getElementById("inputPassword").value;
                 var y = document.getElementById("pwdDiv");
@@ -71,6 +71,7 @@ if (!isset($_SESSION['email'])) {
 <div class="container">
     <h1>Login Form</h1>
     <form id="loginform" class="form-horizontal" action="loginprocess.php" onsubmit="return checkSubmit()" method="post">
+        <!--Email-->
         <div class="form-group" id="emailDiv">
             <label for="inputEmail" class="control-label col-xs-3">Email</label>
             <div class="col-xs-9">
@@ -78,6 +79,7 @@ if (!isset($_SESSION['email'])) {
                 <span id="emailSymbol" style="visibility: hidden"></span>
             </div>
         </div>
+        <!--Password-->
         <div class="form-group" id="pwdDiv">
             <label for="inputPassword" class="control-label col-xs-3">Password</label>
             <div class="col-xs-9">
@@ -85,6 +87,7 @@ if (!isset($_SESSION['email'])) {
                 <span id="pwdSymbol" style="visibility: hidden"></span>
             </div>
         </div>
+        <!--Submit Button-->
         <div class="form-group">
             <div class="col-xs-offset-3 col-xs-9">
                 <button type="submit" class="btn btn-primary">Login</button>

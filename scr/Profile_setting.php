@@ -86,6 +86,10 @@
                             <!-- SIDEBAR MENU -->
                             <div class="profile-usermenu">
                                 <ul class="nav">
+                                    <li>
+                                        <a href="Profile_index.php">
+                                            <i class="glyphicon glyphicon-home"></i> Overview </a>
+                                    </li>
                                     <li  class="active">
                                         <a href="">
                                             <i class="glyphicon glyphicon-user"></i> Profile Info </a>

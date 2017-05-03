@@ -19,19 +19,20 @@
     }
     
     function topNavBar() {
-        ?>
+        ?>  
+            <!--topNavBar-->        
             <nav class="navbar navbar-default" role="navigation">
               <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="home.php">
-                            <span class="glyphicon glyphicon-home"></span> Home
-                        </a>
+                        <span class="glyphicon glyphicon-home"></span> Home
+                    </a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                     <?php
                     if (isset($_SESSION['email'])) {
                         echo '
-                            <a href="Profile_setting.php"><li class="navbar-brand">Hello ' . $_SESSION['firstname'] . '</li></a>
+                            <a href="Profile_index.php"><li class="navbar-brand">Hello ' . $_SESSION['firstname'] . '</li></a>
                             <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
                         ';
                     } else {
@@ -43,7 +44,7 @@
                     ?>
                   
                 </ul>
-             
+            <!-- Carousel IMG-->
             </nav>
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
@@ -91,6 +92,7 @@
     
     function leftNavBar() {
         ?>
+            <!--leftNavBar-->
            <div class="row">
             <div class="col-sm-2">
                <ul class="nav nav-pills nav-stacked">
