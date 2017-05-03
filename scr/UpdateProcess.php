@@ -18,10 +18,8 @@ session_start();
 		if($_POST['password'] === $result['Password']){
 			$email = $_POST['email'];
 			$phonenumber = $_POST['phonenumber'];
-			$firstname = $_POST['firstname'];
 			try{
-				$stmt = $pdo->prepare("UPDATE member SET FirstName =:firstname ,PhoneNumber = :phonenumber WHERE Email = :email");
-				$stmt->bindParam(":firstname", $firstname);
+				$stmt = $pdo->prepare("UPDATE member SET PhoneNumber = :phonenumber WHERE Email = :email");
 				$stmt->bindParam(":email", $email);
 				$stmt->bindParam(":phonenumber", $phonenumber);
 				$stmt->execute();
@@ -31,7 +29,6 @@ session_start();
 					echo 'alert("Data updated!");';
 					echo 'window.location.href="Profile_setting.php";';
 					echo '</script>';
-					$_SESSION['firstname'] = $_POST['firstname'];
 				}else{
 					echo '<script language="javascript">';
 					echo 'alert("Cannot update!");';
@@ -46,11 +43,9 @@ session_start();
 		} else{
 			$email = $_POST['email'];
 			$phonenumber = $_POST['phonenumber'];
-			$firstname = $_POST['firstname'];
 			$password = $_POST['password'];
 			try{
-				$stmt = $pdo->prepare("UPDATE member SET FirstName = :firstname, PhoneNumber = :phonenumber, Password = :password WHERE Email = :email");
-				$stmt->bindParam(":firstname", $firstname);
+				$stmt = $pdo->prepare("UPDATE member SET PhoneNumber = :phonenumber, Password = :password WHERE Email = :email");
 				$stmt->bindParam(":email", $email);
 				$stmt->bindParam(":phonenumber", $phonenumber);
 				$stmt->bindParam(":password", $password);
@@ -61,8 +56,6 @@ session_start();
 					echo 'alert("Data updated!");';
 					echo 'window.location.href="Profile_setting.php";';
 					echo '</script>';
-					var_dump($firstname);
-					$_SESSION['firstname'] = $_POST['firstname'];
 				}else{
 					echo '<script language="javascript">';
 					echo 'alert("Cannot update!");';

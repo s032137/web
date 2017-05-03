@@ -37,10 +37,6 @@
             border-bottom: 1px solid #f0f4f7;
         }
         
-        .profile-usermenu ul li:last-child {
-            border-bottom: none;
-        }
-        
         .profile-usermenu ul li a {
             color: #93a3b5;
             font-size: 14px;
@@ -67,13 +63,7 @@
             border-left: 2px solid #5b9bd1;
             margin-left: -2px;
         }
-        /* Profile Content */
         
-        .profile-content {
-            padding: 20px;
-            background: #fff;
-            min-height: 460px;
-        }
     </style>
 
 </head>
@@ -102,7 +92,7 @@
                                     </li>
                                     <li  class="active">
                                         <a href="">
-                                            <i class="glyphicon glyphicon-user"></i> Profile Settings </a>
+                                            <i class="glyphicon glyphicon-user"></i> Profile Info </a>
                                     </li>
                                     <li>
                                         <a href="Profile_register.php">
@@ -114,11 +104,9 @@
                         </div>
                     </div>
                     <div class="col-md-9">
-                        <div class="profile-content">
-							<?php
-								EditProfile();
-							?>
-                        </div>
+						<?php
+							EditProfile();
+						?>
                     </div>
                 </div>
             </div>

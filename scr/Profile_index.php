@@ -66,13 +66,6 @@
             border-left: 2px solid #5b9bd1;
             margin-left: -2px;
         }
-        /* Profile Content */
-        
-        .profile-content {
-            padding: 20px;
-            background: #fff;
-            min-height: 460px;
-        }
     </style>
 
 </head>
@@ -103,7 +96,7 @@
                                     </li>
                                     <li>
                                         <a href="Profile_setting.php">
-                                            <i class="glyphicon glyphicon-user"></i> Profile Settings </a>
+                                            <i class="glyphicon glyphicon-user"></i> Profile Info </a>
                                     </li>
                                     <li>
                                         <a href="Profile_register.php">
