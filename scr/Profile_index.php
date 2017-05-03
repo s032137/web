@@ -8,15 +8,10 @@
 <html>
 
 <head>
-    <title>
-        Tutorials point Bootstrap Examples
-    </title>
-
     <!-- Bootstrap Core CSS -->
     <link href="http://www.tutorialspoint.com/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="one-page-wonder.css" rel="stylesheet">
     <style>
         body {
             background: #F1F3FA;
@@ -71,13 +66,6 @@
             border-left: 2px solid #5b9bd1;
             margin-left: -2px;
         }
-        /* Profile Content */
-        
-        .profile-content {
-            padding: 20px;
-            background: #fff;
-            min-height: 460px;
-        }
     </style>
 
 </head>
@@ -103,21 +91,18 @@
                             <div class="profile-usermenu">
                                 <ul class="nav">
                                     <li  class="active">
-                                        <a href="Profile_index.php">
+                                        <a href="">
                                             <i class="glyphicon glyphicon-home"></i> Overview </a>
                                     </li>
                                     <li>
                                         <a href="Profile_setting.php">
-                                            <i class="glyphicon glyphicon-user"></i> Profile Settings </a>
+                                            <i class="glyphicon glyphicon-user"></i> Profile Info </a>
                                     </li>
                                     <li>
-                                        <a href="#" target="_blank">
-                                            <i class="glyphicon glyphicon-ok"></i> Tasks </a>
+                                        <a href="Profile_register.php">
+                                            <i class="glyphicon glyphicon-book"></i> Event Application  </a>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="glyphicon glyphicon-flag"></i> Help </a>
-                                    </li>
+                                   
                                 </ul>
                             </div>
                             <!-- END MENU -->

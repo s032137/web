@@ -1,7 +1,7 @@
 <?php
     
     function db_connect() {
-        $dsn = "mysql:dbname=account;host=localhost";
+        $dsn = "mysql:dbname=marathon;host=localhost";
         $dbuser = "root";
         $dbpwd = "";
 
