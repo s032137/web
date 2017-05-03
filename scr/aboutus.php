@@ -5,8 +5,18 @@
     leftNavBar();
 ?>
 <div>
-<h1>About the Organizer</h1>
+    <!--abouts bar-->
+    <nav class = "navbar navbar-default" role = "navigation" >   
+       <div class = "navbar-header">
+          <a class = "navbar-brand" style="color: blue "><span class="glyphicon glyphicon-map-marker"><b>About Us</b></span></a>
+       </div>   
+    </nav>
+
+<br>
 <img src="img/HKAAA.jpg" alt="HKAAA logo S" />
+<br>
+<br>
+<br>
 <div class = "panel-group" id = "accordion">
    <div class = "panel panel-default">
       

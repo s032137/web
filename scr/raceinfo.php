@@ -5,7 +5,18 @@
     leftNavBar();
 ?>
 <div>
-<h1>Routing</h1>
+    <!--Routing bar-->
+    <div>
+    <nav class = "navbar navbar-default" role = "navigation" >   
+       <div class = "navbar-header">
+          <a class = "navbar-brand" style="color: blue "><span class="glyphicon glyphicon-map-marker"><b>Routing</b></span></a>
+       </div>   
+    </nav>
+    <br>
+    
+    <br>
+    
+    
 <!--collapse-->
 <div class = "panel-group" id = "accordion">
    <div class = "panel panel-default">
