@@ -97,7 +97,7 @@
             <div class="col-sm-2">
                <ul class="nav nav-pills nav-stacked">
                    <li><a href="aboutus.php">About Us</a></li>
-                   <li><a href="raceinfo">Race information</a></li>
+                   <li><a href="raceinfo.php">Race information</a></li>
                    <li><a href="enquiry.php">Enquiry</a></li>                   
                </ul>
             </div>
