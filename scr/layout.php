@@ -31,7 +31,7 @@
                     <?php
                     if (isset($_SESSION['email'])) {
                         echo '
-                            <a href="Profile_index.php"><li class="navbar-brand">Hello ' . $_SESSION['firstname'] . '</li></a> 
+                            <a href="Profile_index.php"><li class="navbar-brand">Hello ' . $_SESSION['firstname'] . '</li></a>
                             <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
                         ';
                     } else {
