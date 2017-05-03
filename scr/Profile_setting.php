@@ -12,15 +12,10 @@
 <html>
 
 <head>
-    <title>
-        Tutorials point Bootstrap Examples
-    </title>
-
     <!-- Bootstrap Core CSS -->
     <link href="http://www.tutorialspoint.com/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="one-page-wonder.css" rel="stylesheet">
     <style>
         /* Profile container */
         
@@ -105,17 +100,13 @@
                                         <a href="Profile_index.php">
                                             <i class="glyphicon glyphicon-home"></i> Overview </a>
                                     </li>
-                                    <li class="active">
-                                        <a href="Profile_setting.php">
+                                    <li  class="active">
+                                        <a href="">
                                             <i class="glyphicon glyphicon-user"></i> Profile Settings </a>
                                     </li>
                                     <li>
-                                        <a href="#" target="_blank">
-                                            <i class="glyphicon glyphicon-ok"></i> Tasks </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="glyphicon glyphicon-flag"></i> Help </a>
+                                        <a href="Profile_register.php">
+                                            <i class="glyphicon glyphicon-book"></i> Event Application </a>
                                     </li>
                                 </ul>
                             </div>
