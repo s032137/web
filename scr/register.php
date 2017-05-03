@@ -260,7 +260,7 @@ if (!isset($_SESSION['email'])) {
 	}
 	today = yyyy-16+'-'+mm+'-'+dd;
 	document.getElementById("dobDate").setAttribute("max", today);
-	<!--EndDate--!>
+	<!--EndDate--!>  
 </script>
 <?php
 } else {
