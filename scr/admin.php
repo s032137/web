@@ -56,39 +56,64 @@
                                                 </h4>
                                             </div>
                                             <div class="modal-body">
-                                                <form action="adminprocess.php" method="post" id="edit' . $number . 'form">
-                                                    <div class="form-group" id="emailDiv">
+                                                <form action="adminprocess.php" method="post" id="edit' . $number . 'form" onsubmit="return checkSubmit(\'edit' . $number . 'form\', \'' . $user[0] . '\')">
+                                                    <div class="form-group" id="edit' . $number . 'formemailDiv">
                                                         <label for="email" class="col-sm-2 control-label">Email</label>
                                                         <input type="text" class="form-control" id="email" name="email" placeholder="' .$user[0] . '" oninput="checkEmail(\'edit' . $number . 'form\', \'' . $user[0] . '\')">
-                                                        <span id="emailSymbol" style="visibility: hidden"></span>
+                                                        <span id="edit' . $number . 'formemailSymbol" style="visibility: hidden"></span>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" id="edit' . $number . 'formfirstNameDiv">
                                                         <label for="firstname" class="col-sm-2 control-label">First Name</label>
-                                                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="' .$user[2] . '">
+                                                        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="' .$user[2] . '" oninput="checkFirstName(\'edit' . $number . 'form\', \'' . $user[0] . '\')" />
+                                                        <span id="edit' . $number . 'formfirstNameSymbol" style="visibility: hidden"></span>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" id="edit' . $number . 'formlastNameDiv">
                                                         <label for="lastname" class="col-sm-2 control-label">Last Name</label>
-                                                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="' .$user[3] . '">
+                                                        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="' .$user[3] . '" oninput="checkLastName(\'edit' . $number . 'form\', \'' . $user[0] . '\')" />
+                                                        <span id="edit' . $number . 'formlastNameSymbol" style="visibility: hidden"></span>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" id="edit' . $number . 'formageDiv">
                                                         <label for="age" class="col-sm-2 control-label">Age</label>
-                                                        <input type="text" class="form-control" id="age" name="age" placeholder="' .$user[4] . '">
+                                                        <input type="text" class="form-control" id="age" name="age" placeholder="' .$user[4] . '" oninput="checkAge(\'edit' . $number . 'form\', \'' . $user[0] . '\')" />
+                                                        <span id="edit' . $number . 'formageSymbol" style="visibility: hidden"></span>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" id="edit' . $number . 'formphoneDiv">
                                                         <label for="phone" class="col-sm-2 control-label">Phone</label>
-                                                        <input type="text" class="form-control" id="phone" name="phone" placeholder="' .$user[5] . '">
+                                                        <input type="text" class="form-control" id="phone" name="phone" placeholder="' .$user[5] . '" oninput="checkPhone(\'edit' . $number . 'form\', \'' . $user[0] . '\')" />
+                                                        <span id="edit' . $number . 'formphoneSymbol" style="visibility: hidden"></span>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group" id="edit' . $number . 'formbirthdayDiv">
                                                         <label for="birthday" class="col-sm-2 control-label">Birthday</label>
-                                                        <input type="text" class="form-control" id="birthday" name="birthday" placeholder="' .$user[6] . '">
+                                                        <input type="date" class="form-control" id="birthday" name="birthday" placeholder="' .$user[6] . '" oninput="checkBirthday(\'edit' . $number . 'form\', \'' . $user[0] . '\')" />
+                                                        <span id="edit' . $number . 'formbirthdaySymbol" style="visibility: hidden"></span>
                                                     </div>
+                                                    <br />
                                                     <div class="form-group">
-                                                        <label for="email" class="col-sm-2 control-label">Gender</label>
-                                                        <input type="text" class="form-control" id="firstname" placeholder="' .$user[7] . '">
+                                                        <label class="control-label col-xs-3">Gender:</label>
+                                                        <div class="col-xs-2">
+                                                            <label class="radio-inline">
+                                                                <input name="gender" type="radio"  value="male" id="gender1"> Male
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-xs-2">
+                                                            <label class="radio-inline">
+                                                                <input name="gender" type="radio"  value="female" id="gender2"> Female
+                                                            </label>
+                                                        </div>
                                                     </div>
+                                                    <br />
                                                     <div class="form-group">
-                                                        <label for="email" class="col-sm-2 control-label">Type</label>
-                                                        <input type="text" class="form-control" id="firstname" placeholder="' .$user[8] . '">
+                                                        <label for="type" class="col-sm-2 control-label">Type</label>
+                                                        <div class="col-xs-2">
+                                                            <label class="radio-inline">
+                                                                <input name="type" type="radio"  value="admin" id="type1">Administrator
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-xs-2">
+                                                            <label class="radio-inline">
+                                                                <input name="type" type="radio" value="member" id="type2">Member
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                     </div>
                                                     <div class="modal-footer">
@@ -100,8 +125,26 @@
                                                     <button type="submit" class="btn btn-primary">
                                                         Edit
                                                     </button>
-                                                    <button type="button" class="btn btn-primary" onclick="a(\'edit' . $number . 'form\')">Testing</button> 
+                                                    <button type="button" class="btn btn-primary" onclick="checkBirthday(\'edit' . $number . 'form\')">Testing</button> 
                                                 </form>
+                                                <script type="text/javascript">
+                                                    var m = document.getElementById("edit' . $number . 'form").gender1;
+                                                    var f = document.getElementById("edit' . $number . 'form").gender2;
+                                                    if (m.value == "' . $user[7] . '") {
+                                                        m.checked = true;
+                                                    } else {
+                                                        f.checked = true;
+                                                    }
+                                                    
+                                                    var a = document.getElementById("edit' . $number . 'form").type1;
+                                                    var b = document.getElementById("edit' . $number . 'form").type2;
+                                                    if (a.value == "' . $user[8] . '") {
+                                                        a.checked = true;
+                                                    } else {
+                                                        b.checked = true;
+                                                    }
+                                                    
+                                                </script>
                                             </div>
                                         </div>
                                     </div>
@@ -162,14 +205,11 @@
            
            <script type="text/javascript">
                
-               function a(id) {
-                   alert(id);
-                   alert(document.getElementById(id).age.placeholder)
-               }
+      
                //checkSubmit
-            function checkSubmit() {
+            function checkSubmit(id) {
                 var warning = document.getElementById("warning");
-                if (checkEmail() && checkPwd() && checkFirstName() && checkLastName() && checkPhoneNum() && checkGender() && checkTermsbox()) {
+                if (checkEmail(id) && checkFirstName(id) && checkLastName(id) && checkPhone(id) && checkAge(id) && checkBirthday(id)) {
                     return true;
                 } else {
                     warning.style.display = "";
@@ -179,18 +219,17 @@
             }
             //checkEmail
             function checkEmail(id) {
-                
-                var form = document.getElementById(id);
                 var x = document.getElementById(id).email;
-                var y = document.getElementById(id).emailDiv;
-                var z = document.getElementById(id).emailSymbol;
+                var y = document.getElementById(id + 'emailDiv');
+                var z = document.getElementById(id + 'emailSymbol');
                 var a = x.placeholder;
                  var atpos = x.value.indexOf("@");
                  var dotpos = x.value.lastIndexOf(".");
-                
-                alert(x.value.length);
                 if (x.value.length == 0) {
-                    x.value == placeholder;
+                    x.value = a;
+                    y.className="form-group has-success has-feedback";
+                    z.className="glyphicon glyphicon-ok form-control-feedback";
+                    z.style.visibility = "visible";
                     return true;
                 } else if (atpos < 1 || dotpos < atpos + 2 || dotpos +2 >= x.value.length) {
                     y.className="form-group has-error has-feedback";
@@ -198,35 +237,28 @@
                     z.style.visibility = "visible";
                     return false;
                 } else {
+                    alert('correct');
                     y.className="form-group has-success has-feedback";
                     z.className="glyphicon glyphicon-ok form-control-feedback";
                     z.style.visibility = "visible";
                     return true;
                 }
             }
-            //checkPwd
-            function checkPwd() {
-                var x = document.getElementById("inputPassword").value;
-                var y = document.getElementById("pwdDiv");
-                var z = document.getElementById("pwdSymbol");
-                if (x.length <= 7) {
-                    y.className="form-group has-error has-feedback";
-                    z.className="glyphicon glyphicon-remove form-control-feedback";
-                    z.style.visibility = "visible";
-                    return false;
-                } else {
-                    y.className="form-group has-success has-feedback";
-                    z.className="glyphicon glyphicon-ok form-control-feedback";
-                    z.style.visibility = "visible";
-                    return true;
-                }
-            }
+            
             //checkFirstName
-            function checkFirstName() {
-                var x = document.getElementById("firstName").value;
-                var y = document.getElementById("fnDiv");
-                var z = document.getElementById("fnSymbol");
-                if (x.length <= 2) {
+            function checkFirstName(id) {
+                var x = document.getElementById(id).firstname;
+                var y = document.getElementById(id + 'firstNameDiv');
+                var z = document.getElementById(id + 'firstNameSymbol');
+                var a = x.placeholder;
+                
+                if (x.value.length == 0) {
+                    x.value = a;
+                    y.className="form-group has-success has-feedback";
+                    z.className="glyphicon glyphicon-ok form-control-feedback";
+                    z.style.visibility = "visible";
+                    return true;
+                } else if (x.value.length <= 2) {
                     y.className="form-group has-error has-feedback";
                     z.className="glyphicon glyphicon-remove form-control-feedback";
                     z.style.visibility = "visible";
@@ -239,11 +271,19 @@
                 }
             }
             //checkLastName
-            function checkLastName() {
-                var x = document.getElementById("lastName").value;
-                var y = document.getElementById("lnDiv");
-                var z = document.getElementById("lnSymbol");
-                if (x.length <= 2) {
+            function checkLastName(id) {
+                 var x = document.getElementById(id).lastname;
+                var y = document.getElementById(id + 'lastNameDiv');
+                var z = document.getElementById(id + 'lastNameSymbol');
+                var a = x.placeholder;
+                
+                if (x.value.length == 0) {
+                    x.value = a;
+                    y.className="form-group has-success has-feedback";
+                    z.className="glyphicon glyphicon-ok form-control-feedback";
+                    z.style.visibility = "visible";
+                    return true;
+                } else if (x.value.length <= 2) {
                     y.className="form-group has-error has-feedback";
                     z.className="glyphicon glyphicon-remove form-control-feedback";
                     z.style.visibility = "visible";
@@ -256,16 +296,24 @@
                 }
             }
             //checkAge
-            function checkAge() {
-                var x = document.getElementById("age").value;
-                var y = document.getElementById("ageDiv");
-                var z = document.getElementById("ageSymbol");
-                if (x < 16 || x >= 100 ) {
+            function checkAge(id) {
+                var x = document.getElementById(id).age;
+                var y = document.getElementById(id + "ageDiv");
+                var z = document.getElementById(id + "ageSymbol");
+                var a = x.placeholder;
+                if (x.value.length == 0) {
+                    x.value = a;
+                    y.className="form-group has-success has-feedback";
+                    z.className="glyphicon glyphicon-ok form-control-feedback";
+                    z.style.visibility = "visible";
+                    return true;
+                } else if (x.value < 16 || x.value >= 100 ) {
                     y.className="form-group has-error has-feedback";
                     z.className="glyphicon glyphicon-remove form-control-feedback";
                     z.style.visibility = "visible";
                     return false;
                 } else {
+                    
                     y.className="form-group has-success has-feedback";
                     z.className="glyphicon glyphicon-ok form-control-feedback";
                     z.style.visibility = "visible";
@@ -273,11 +321,19 @@
                 }
             }
             //checkPhoneNum
-            function checkPhoneNum() {
-                var x = document.getElementById("phoneNumber").value;
-                var y = document.getElementById("phoneNumDiv");
-                var z = document.getElementById("phoneNumSymbol");
-                if (x.length !== 8) {
+            function checkPhone(id) {
+                var x = document.getElementById(id).phone;
+                var y = document.getElementById(id + "phoneDiv");
+                var z = document.getElementById(id + "phoneSymbol");
+                var a = x.placeholder;
+                
+                if (x.value.length == 0) {
+                    x.value = a;
+                    y.className="form-group has-success has-feedback";
+                    z.className="glyphicon glyphicon-ok form-control-feedback";
+                    z.style.visibility = "visible";
+                    return true;
+                } else if (x.value.length !== 8) {
                     y.className="form-group has-error has-feedback";
                     z.className="glyphicon glyphicon-remove form-control-feedback";
                     z.style.visibility = "visible";
@@ -290,42 +346,25 @@
                 }
             }
             //checkDoBDate
-            function checkDoBDate() {
-                var x = document.getElementById("dobDate").value;
-                var y = document.getElementById("dobDiv");
-                var z = document.getElementById("dobSymbol");
-                if (x == "") {
-                    y.className="form-group has-error has-feedback";
-                    z.className="glyphicon glyphicon-remove form-control-feedback";
+            function checkBirthday(id) {
+                var x = document.getElementById(id).birthday;
+                var y = document.getElementById(id + "birthdayDiv");
+                var z = document.getElementById(id + "birthdaySymbol");
+                var a = x.placeholder;
+                
+                
+                
+                if (x.value == "") {
+                    x.value = a;
+                    y.className="form-group has-success has-feedback";
+                    z.className="glyphicon glyphicon-ok form-control-feedback";
                     z.style.visibility = "visible";
-                    return false;
+                    return true;
                 } else {
                     y.className="form-group has-success has-feedback";
                     z.className="glyphicon glyphicon-ok form-control-feedback";
                     z.style.visibility = "visible";
                     return true;
-                }
-            }
-            //checkGender
-            function checkGender() {
-                var x = document.getElementsByName("gender");
-                var y = document.getElementById("genderDiv");
-                
-                if (x[0].checked || x[1].checked) {
-                    y.className="form-group has-success has-feedback";
-                    return true;
-                } else {
-                    y.className="form-group has-error has-feedback";
-                    return false;
-                }
-                
-                for (i=0; i<x.gender.length; i++) {
-                    if (x.gender[i].checked) {
-                        return true;
-                        break;
-                    } else {
-                        return false;
-                    }
                 }
             }
                </script>
@@ -340,10 +379,6 @@
         
         $result = $stmt->fetchAll();
         return $result;
-    }
-    
-    function editUserINFO($email, $firstName, $lastName, $age, $phoneNumber, $dateOfBirth, $gender, $type) {
-        
     }
 
 ?>

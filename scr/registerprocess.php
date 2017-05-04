@@ -22,7 +22,7 @@
             $gender = $_POST['gender'];
             
             
-            $stmt = $pdo->prepare("INSERT INTO member VALUES(:email,:pwd,:firstname,:lastname,:age,:phonenumber,:date,:gender);");
+            $stmt = $pdo->prepare("INSERT INTO member (Email, Password, FirstName, LastName, Age, PhoneNumber, DOB, Gender) VALUES(:email,:pwd,:firstname,:lastname,:age,:phonenumber,:date,:gender);");
             $stmt->bindParam(":email", $email);
             $stmt->bindParam(":pwd", $pwd);
             $stmt->bindParam(":firstname", $firstname);
