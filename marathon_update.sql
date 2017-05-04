@@ -25,8 +25,12 @@ SET time_zone = "+00:00";
 --
 -- 資料表結構 `marathon21012018`
 --
+CREATE Database IF NOT EXISTS `marathon` DEFAULT CHARACTER SET utf8;
 
-CREATE TABLE `marathon21012018` (
+
+
+
+CREATE TABLE IF NOT EXISTS `marathon`. `marathon21012018` (
   `FirstName` varchar(50) NOT NULL,
   `LastName` varchar(50) NOT NULL,
   `Gender` varchar(50) NOT NULL,
@@ -42,7 +46,7 @@ CREATE TABLE `marathon21012018` (
 -- 資料表結構 `member`
 --
 
-CREATE TABLE `member` (
+CREATE TABLE IF NOT EXISTS `marathon`.  `member` (
   `Email` varchar(50) NOT NULL,
   `Password` varchar(50) NOT NULL,
   `FirstName` varchar(50) NOT NULL,
@@ -58,7 +62,7 @@ CREATE TABLE `member` (
 -- 資料表的匯出資料 `member`
 --
 
-INSERT INTO `member` (`Email`, `Password`, `FirstName`, `LastName`, `Age`, `PhoneNumber`, `DOB`, `Gender`, `Type`) VALUES
+INSERT INTO `marathon`.`member` (`Email`, `Password`, `FirstName`, `LastName`, `Age`, `PhoneNumber`, `DOB`, `Gender`, `Type`) VALUES
 ('123@123', 'qweqwe', 'a', 'bc', 1, '555555', '2017-04-06', 'male', 'admin'),
 ('aaa@aaa.com', '123456789', 'bbb', 'ccc', 13, '55555', '2017-05-01', 'male', 'member'),
 ('abc@abc', 'qwe', 'qweabc', 'F', 1, '5038964010', '2017-04-06', 'F', 'member'),
@@ -72,7 +76,7 @@ INSERT INTO `member` (`Email`, `Password`, `FirstName`, `LastName`, `Age`, `Phon
 -- 資料表結構 `news`
 --
 
-CREATE TABLE `news` (
+CREATE TABLE IF NOT EXISTS `marathon`.  `news` (
   `id` int(3) NOT NULL,
   `date` varchar(20) NOT NULL,
   `topic` varchar(1000) NOT NULL,
@@ -83,7 +87,7 @@ CREATE TABLE `news` (
 -- 資料表的匯出資料 `news`
 --
 
-INSERT INTO `news` (`id`, `date`, `topic`, `content`) VALUES
+INSERT INTO `marathon`.`news` (`id`, `date`, `topic`, `content`) VALUES
 (1, '13 April 2017', 'Hong Kong Amateur Athletic Association - Tender for Marathon Secretariat Service (Entries & Runners\'Communication)', 'Hong Kong Amateur Athletic Association (HKAAA) is the governing body of athletics in Hong Kong with the mission of promoting and developing road races, track and field, race walking and cross-country events in Hong Kong. With the continuous development of the Standard Chartered Hong Kong Marathon, the HKAAA wishes to invite application to provide secretariat services (Entries & Runners\'Communication) to this major event on a maximum of 3 years\'contract term.'),
 (2, '13 April 2017', 'Hong Kong Amateur Athletic Association - Tender for Marathon Secretariat Service (Organization & Operations)', 'Hong Kong Amateur Athletic Association (HKAAA) is the governing body of athletics in Hong Kong with the mission of promoting and developing road races, track and field, race walking and cross-country events in Hong Kong. With the continuous development of the Standard Chartered Hong Kong Marathon, the HKAAA wishes to invite application to provide secretariat services (Organization & Operations) to this major event on a maximum of 3 years\'contract term.'),
 (3, '13 April 2017', 'Hong Kong Amateur Athletic Association - Tender for Marathon Website Project', 'Hong Kong Amateur Athletic Association (HKAAA) is the governing body of athletics in Hong Kong with the mission of promoting and developing road races, track and field, race walking and cross-country events in Hong Kong. With the continuous development of the Standard Chartered Hong Kong Marathon, the HKAAA wishes to invite a tender for the provisions of a new Website Project for the Standard Chartered Hong Kong Marathon.'),
@@ -96,19 +100,19 @@ INSERT INTO `news` (`id`, `date`, `topic`, `content`) VALUES
 --
 -- 資料表索引 `marathon21012018`
 --
-ALTER TABLE `marathon21012018`
+ALTER TABLE `marathon`.`marathon21012018`
   ADD PRIMARY KEY (`Email`);
 
 --
 -- 資料表索引 `member`
 --
-ALTER TABLE `member`
+ALTER TABLE `marathon`.`member`
   ADD PRIMARY KEY (`Email`);
 
 --
 -- 資料表索引 `news`
 --
-ALTER TABLE `news`
+ALTER TABLE `marathon`.`news`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -118,7 +122,7 @@ ALTER TABLE `news`
 --
 -- 使用資料表 AUTO_INCREMENT `news`
 --
-ALTER TABLE `news`
+ALTER TABLE `marathon`. `news`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
