@@ -25,11 +25,13 @@
                     $db_email = $r[0];
                     $db_pwd = $r[1];
                     $db_firstname = $r[2];
+                    $db_actype = $r[8];
             }
 
                 if ($pwd == $db_pwd) {
                     $_SESSION['email'] = $db_email;
                     $_SESSION['firstname'] = $db_firstname;
+                    $_SESSION['actype'] = $db_actype;
                     header("Location: home.php");
                 } else {
                     //warning wrong password

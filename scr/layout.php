@@ -30,11 +30,15 @@
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                     <?php
-                    if (isset($_SESSION['email'])) {
-                        echo '
-                            <a href="Profile_setting.php"><li class="navbar-brand">Hello ' . $_SESSION['firstname'] . '</li></a>
-                            <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
-                        ';
+                    if (isset($_SESSION['email']) && isset($_SESSION['actype'])) {
+                        
+                        echo '<a href="Profile_setting.php"><li class="navbar-brand">Hello ' . $_SESSION['firstname'] . '</li></a>';
+                        
+                        if ($_SESSION['actype'] == 'admin') {
+                            echo '<a href="admin.php"><li class="navbar-brand">Management</li></a>';
+                        }
+                        
+                        echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>';
                     } else {
                         echo '
                             <li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Register</a></li>
@@ -103,6 +107,18 @@
             </div>
                <div class="col-sm-8">
                         
+        <?php
+    }
+    
+    function adminLeftNavBar() {
+        ?>
+             <div class="row">
+                 <div class="col-sm-2">
+                     <ul class="nav nav-pills nav-stacked">
+                         <li class="active"><a href="admin.php">Users</a></li>
+                         <li><a href="news.php">News</a></li>
+                     </ul>
+                 </div>
         <?php
     }
     
